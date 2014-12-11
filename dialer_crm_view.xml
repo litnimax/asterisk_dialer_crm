@@ -1,0 +1,22 @@
+<openerp><data>
+	<record id='asterisk_dialer_crm_form' model='ir.ui.view'>
+		<field name='name'>Asterisk Dialer CRM form</field>
+		<field name='model'>asterisk.dialer</field>
+		<field name='inherit_id' ref='asterisk_dialer.dialer_view_form'/>
+		<field name='arch' type='xml'>
+			<data>
+				<xpath expr="//group[@name='col-2']" position='inside'>
+		            <field name='create_lead_on_answer' attrs="{'invisible': [('dialer_type','!=','stasis')]}"/>
+		            <field name='lead_on_answer_campaign' attrs="{'invisible': [('create_lead_on_answer','!=',True)]}"/>
+		            <field name='lead_on_answer_channel' attrs="{'invisible': [('create_lead_on_answer','!=',True)]}"/>
+		            <field name='lead_on_answer_source' attrs="{'invisible': [('create_lead_on_answer','!=',True)]}"/>
+		            <field name='create_lead_on_key_press' attrs="{'invisible': [('dialer_type','!=','stasis')]}"/>
+		            <field name='lead_on_key_press_campaign' attrs="{'invisible': [('create_lead_on_key_press','!=',True)]}"/>
+		            <field name='lead_on_key_press_channel' attrs="{'invisible': [('create_lead_on_key_press','!=',True)]}"/>
+		            <field name='lead_on_key_press_source' attrs="{'invisible': [('create_lead_on_key_press','!=',True)]}"/>
+        		</xpath>
+        	</data>
+        </field>
+    </record>
+</data>
+</openerp>

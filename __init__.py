@@ -1,1 +1,1 @@
-import dialer_crm.py
+import dialer_crm
